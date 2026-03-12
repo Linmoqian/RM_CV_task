@@ -1,0 +1,75 @@
+# 编译产物
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+
+# CMake
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake.in
+install_manifest.txt
+
+# IDE 和编辑器
+# Visual Studio
+.vs/
+*.vcxproj
+*.vcxproj.*
+*.sln
+*.suo
+*.user
+*.sdf
+*.opensdf
+*.pdb
+ipch/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# CLion / IntelliJ
+.idea/
+*.iml
+
+# 其他编辑器
+*.swp
+*.swo
+*~
+
+# 操作系统生成文件
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 日志和临时文件
+*.log
+*.tmp
+*.temp
+*.bak
+
+# 依赖目录
+vendor/
+third_party/
+deps/
+
+# Python（如果有Python脚本辅助）
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+
+# 文档图片缓存（保留源图片）
+*.png~
+*.jpg~
