@@ -4,7 +4,10 @@
 
 # 快速开始
 
-git clone 
+git clone https://github.com/Linmoqian/RM_CV_task
+
+cd RM_CV_task
 
 # 目录结构
 - UI_design: 前后端开发方向的设计原则和设计稿
+- CV_task  : 视觉组考核题
