@@ -37,3 +37,11 @@ class Armor:
         输出装甲板颜色
         """
         pass
+
+if __name__ == "__main__":
+    armor = Armor(ID=1, color='red', position=(100, 200), width=50, height=30)
+    image = cv2.imread('images/3个装甲板.png')
+    cv2.imshow('Armor Detection', image)
+    cv2.waitKey(0)  # 一直显示，直到按任意键
+    cv2.destroyAllWindows()
+    armor.detect(image)
