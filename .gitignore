@@ -9,7 +9,7 @@
 *.dll
 *.a
 *.lib
-
+CV_task/dataset/*
 # CMake
 build/
 cmake-build-*/
