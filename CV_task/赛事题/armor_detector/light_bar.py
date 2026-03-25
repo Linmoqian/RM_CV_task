@@ -3,7 +3,7 @@ import numpy as np
 from typing import List, Tuple
 
 from .config import DetectorConfig
-from .types import ArmorColor, LightBar
+from .armor_types import ArmorColor, LightBar
 from .color_segmenter import ColorSegmenter
 
 

@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 from .config import DetectorConfig
-from .types import ArmorColor
+from .armor_types import ArmorColor
 
 
 class ColorSegmenter:

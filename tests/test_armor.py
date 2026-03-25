@@ -1,7 +1,7 @@
 import numpy as np
 from armor_detector.armor import ArmorMatcher
 from armor_detector.config import DetectorConfig
-from armor_detector.types import ArmorColor, ArmorSize, LightBar
+from armor_detector.armor_types import ArmorColor, ArmorSize, LightBar
 
 
 def create_test_light(center_x, center_y, height=50, angle=90, color=ArmorColor.BLUE):

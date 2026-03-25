@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 from armor_detector.light_bar import LightBarFinder
 from armor_detector.config import DetectorConfig
-from armor_detector.types import ArmorColor
+from armor_detector.armor_types import ArmorColor
 
 
 def test_find_light_bars_empty():

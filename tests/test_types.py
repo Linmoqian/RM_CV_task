@@ -1,5 +1,5 @@
 import numpy as np
-from armor_detector.types import ArmorColor, ArmorSize, LightBar, Armor, DetectResult
+from armor_detector.armor_types import ArmorColor, ArmorSize, LightBar, Armor, DetectResult
 
 
 def test_armor_color_enum():

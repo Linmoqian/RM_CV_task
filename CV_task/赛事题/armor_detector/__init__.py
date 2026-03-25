@@ -1,4 +1,4 @@
-from .types import ArmorColor, ArmorSize, LightBar, Armor, DetectResult
+from .armor_types import ArmorColor, ArmorSize, LightBar, Armor, DetectResult
 from .config import DetectorConfig
 from .color_segmenter import ColorSegmenter
 from .light_bar import LightBarFinder

@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 from armor_detector import ArmorDetector
-from armor_detector.types import ArmorColor, ArmorSize
+from armor_detector.armor_types import ArmorColor, ArmorSize
 
 
 def test_full_pipeline_empty():

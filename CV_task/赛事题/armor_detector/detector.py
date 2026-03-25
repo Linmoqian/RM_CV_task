@@ -7,7 +7,7 @@ import numpy as np
 from .armor import ArmorMatcher
 from .config import DetectorConfig
 from .light_bar import LightBarFinder
-from .types import ArmorColor, Armor, DetectResult
+from .armor_types import ArmorColor, Armor, DetectResult
 
 
 class ArmorDetector:

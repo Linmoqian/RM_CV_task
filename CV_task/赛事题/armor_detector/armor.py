@@ -2,7 +2,7 @@ import math
 from typing import List
 
 from .config import DetectorConfig
-from .types import ArmorColor, ArmorSize, LightBar, Armor
+from .armor_types import ArmorColor, ArmorSize, LightBar, Armor
 
 
 class ArmorMatcher:
