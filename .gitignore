@@ -9,6 +9,8 @@
 *.dll
 *.a
 *.lib
+data/
+checkpoints/
 CV_task/dataset/*
 # CMake
 build/
