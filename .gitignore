@@ -9,9 +9,12 @@
 *.dll
 *.a
 *.lib
+output/
+runs/
 data/
 checkpoints/
 CV_task/dataset/*
+CV_task/dataset_split/*
 # CMake
 build/
 cmake-build-*/
