@@ -7,6 +7,7 @@
 *.so
 *.dylib
 *.dll
+*.mp4
 *.a
 *.lib
 output/
