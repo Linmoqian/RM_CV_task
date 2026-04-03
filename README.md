@@ -22,4 +22,12 @@ cd RM_CV_task
 # 效果速览
 
 装甲板
-![alt text](images/装甲板识别效果.png)
+![alt text](./images/装甲板.gif)
+
+能量机关
+![alt text](./images/机关.gif)
+
+# 开发环境
+
+- Python 3.11
+系统：Windows 11、Ubuntu 22.04、MACOS 23.04
