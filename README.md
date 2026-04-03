@@ -27,13 +27,9 @@ RM_CV_task/
 
 **装甲板检测**
 
-![装甲板](./images/装甲板.gif)
-
 ![alt text](./images/装甲板.png)
 
 **能量机关**
-
-![能量机关](./images/机关.gif)
 
 ![alt text](./images/机关.png)
 
