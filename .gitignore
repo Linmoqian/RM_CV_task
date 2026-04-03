@@ -77,8 +77,8 @@ venv/
 .venv/
 
 # 文档图片缓存（保留源图片）
-*.png~
-*.jpg~
+
+
 
 # ROS2
 ros2_ws/build/
