@@ -1,0 +1,20 @@
+name: rm-cv
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.11
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cpuonly
+  - opencv
+  - pip:
+      - ultralytics==8.4.27
+      - fastapi==0.135.1
+      - uvicorn==0.42.0
+      - tensorboard==2.20.0
+      - pytest==9.0.2
+      - tqdm==4.67.3
+      - python-dotenv==1.2.2
+      - opencv-contrib-python-headless==4.13.0.92
