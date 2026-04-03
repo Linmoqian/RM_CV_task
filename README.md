@@ -21,6 +21,10 @@ RM_CV_task/
 
 ## 效果速览
 
+手写识别
+
+![alt text](images/lenet5_demo2.png)
+
 **装甲板检测**
 ![装甲板](./images/装甲板.gif)
 
