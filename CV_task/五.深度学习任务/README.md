@@ -1,21 +1,14 @@
-# 分类任务
+# 深度学习任务
 
-可参考我的另一个项目，基于CNN对GM12878细胞系的DNA表达进行预测
+## 子任务
 
-https://github.com/Linmoqian/DNA_CNN_predict 
+| 目录 | 内容 |
+|------|------|
+| [1.分类任务](./1.分类任务/README.md) | LeNet5 手写数字 + YOLO 装甲板数字分类 |
+| [3.神经网络剪枝](./3.神经网络剪枝/NOTE.md) | 剪枝理论学习笔记 |
 
-# 回归任务
+## 工具
 
-标注使用：X-AnyLabeling,而不是古早的lableme（忒难用），自动化标注工具，
-
-项目地址：https://github.com/CVHub520/X-AnyLabeling
-
-目前正在自定义X-AnyLabeling
-
-调用的是Meta的segment-anything模型。
-
-数据增强方式：旋转
-
-此外，我开发了一款标注数据同步平台,配置数据库信息后可供团队直接使用
-
-https://github.com/Linmoqian/unit-workplace
+- 标注工具：[X-AnyLabeling](https://github.com/CVHub520/X-AnyLabeling)（基于 SAM）
+- 数据同步：[unit-workplace](https://github.com/Linmoqian/unit-workplace)
+- 参考项目：[DNA_CNN_predict](https://github.com/Linmoqian/DNA_CNN_predict)

@@ -1,10 +1,17 @@
-# 说明
+# 分类任务
 
-"Inference.py"进行模型推理
-如果推理有误，一定是你写的不规范（）
+## 文件
 
-![演示1](../../../images/lenet5_demo1.png)
+| 文件 | 说明 |
+|------|------|
+| `train.py` | LeNet5 训练脚本 |
+| `Inference.py` | 模型推理 |
+| `train_yolo.py` | YOLO 分类训练（装甲板数字） |
+| `lenet5_best.pth` | LeNet5 权重 |
 
-![演示2](../../../images/lenet5_demo2.png)
+## 运行
 
-![演示3](../../../images/lenet5_demo3.png)
+```bash
+python train_yolo.py  # YOLO 分类训练
+python Inference.py   # LeNet5 推理
+```
