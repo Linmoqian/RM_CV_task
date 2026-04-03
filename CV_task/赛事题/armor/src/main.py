@@ -1,5 +1,5 @@
 # 装甲板识别程序
-# 功能：从视频中检测蓝色装甲板，绘制轮廓和四边形边框
+# 功能：从视频中检测蓝色装甲板，绘制轮廓和四边形边框，识别数字
 
 import cv2
 from pathlib import Path
@@ -7,6 +7,13 @@ import numpy as np
 from display import merge_display_images
 from datect_armor import detect_armor
 from pnp import solve_armor_pnp, draw_pnp_info
+from ultralytics import YOLO
+
+# ============ 加载数字分类模型 ============
+model_path = Path(__file__).resolve().parents[3] / "runs/classify/runs/classify/digit_classifier/weights/best.pt"
+classifier = YOLO(str(model_path))
+class_names = ["0", "1", "2", "3", "4", "5", "6", "7", "8"]  # 0=负样本, 1-8=数字
+
 # ============ 配置参数 ============
 project_root = Path(__file__).resolve().parents[1]
 video_path = project_root / "images" / "blue.mp4"
@@ -49,6 +56,21 @@ while True:
         if success:
             # 绘制 PnP 信息（距离、角度、坐标轴）
             img = draw_pnp_info(img, points_2d, rvec, tvec, distance)
+
+        # ===== 数字分类识别 =====
+        if armor_crop is not None and armor_crop.size > 0:
+            results = classifier.predict(armor_crop, verbose=False)
+            if results and len(results) > 0:
+                probs = results[0].probs
+                class_id = probs.top1
+                confidence = probs.top1conf.item()
+                label = class_names[class_id]
+
+                # 在armor_crop上显示分类结果
+                h, w = armor_crop.shape[:2]
+                text = f"{label} ({int(confidence * 100)}%)"
+                cv2.putText(armor_crop, text, (10, h - 15),
+                           cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 255), 2)
 
     # ----- 合并并显示结果 -----
     merged_img = merge_display_images(Gaussian, img, armor_crop)

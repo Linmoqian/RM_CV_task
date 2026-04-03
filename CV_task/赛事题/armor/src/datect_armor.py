@@ -100,7 +100,22 @@ def detect_armor(Gaussian, img, min_area, top_k, frame):
             x_max = min(frame.shape[1], x_max + margin)
             y_max = min(frame.shape[0], y_max + margin)
 
-            armor_crop = frame[y_min:y_max, x_min:x_max].copy()
+            armor_crop_full = frame[y_min:y_max, x_min:x_max].copy()
+
+            # 提取中心数字区域（去掉左右灯条）
+            h, w = armor_crop_full.shape[:2]
+            left_margin = int(w * 0.25)   # 去掉左边1/4（左灯条）
+            right_margin = int(w * 0.75)  # 去掉右边1/4（右灯条）
+            top_margin = int(h * 0.2)     # 去掉上边20%
+            bottom_margin = int(h * 0.8)  # 去掉下边20%
+
+            # 确保不越界
+            left_margin = max(0, left_margin)
+            right_margin = min(w, right_margin)
+            top_margin = max(0, top_margin)
+            bottom_margin = min(h, bottom_margin)
+
+            armor_crop = armor_crop_full[top_margin:bottom_margin, left_margin:right_margin].copy()
 
             # 返回装甲板顶点坐标和截取区域
             armor_points = [point1, point2, point3, point4]  # 左上、左下、右上、右下

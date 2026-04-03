@@ -1,0 +1,33 @@
+# 装甲板识别配置文件
+
+armor_processor:
+  ros__parameters:
+    # 输入输出话题
+    input_topic: "/camera/image_raw"
+    output_topic: "/armor/result"
+    digit_topic: "/armor/digit"
+
+    # 显示设置
+    show_window: true
+
+    # 装甲板检测参数
+    min_area: 100        # 灯条最小面积
+    top_k: 4             # 处理的最大轮廓数
+
+    # 分类模型路径
+    model_path: ""
+
+video_publisher:
+  ros__parameters:
+    video_path: ""
+    frame_rate: 30.0
+    loop: true
+    topic_name: "/camera/image_raw"
+
+camera_publisher:
+  ros__parameters:
+    camera_id: 0
+    frame_rate: 30
+    width: 640
+    height: 480
+    topic_name: "/camera/image_raw"

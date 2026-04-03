@@ -79,3 +79,25 @@ venv/
 # 文档图片缓存（保留源图片）
 *.png~
 *.jpg~
+
+# ROS2
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# 模型文件（大文件）
+*.pt
+*.onnx
+*.pth
+*.weights
+!runs/classify/**/best.pt
+
+# 数据集
+dataset/
+dataset_split/
+dataset.zip
+images/
+
+# 临时文件
+t
+*.orig
