@@ -84,6 +84,9 @@ venv/
 ros2_ws/build/
 ros2_ws/install/
 ros2_ws/log/
+install/
+log/
+build/
 
 # 模型文件（大文件）
 *.pt
